@@ -28,7 +28,8 @@ rdm = RandomState(1)
 dataset_size = 128
 X = rdm.rand(dataset_size,2)
 Y = [[int(x1 + x2 < 1)] for (x1 , x2) in X]
-
+print 'X:',len(X)
+print 'Y:',Y
 # 创建会话来运行tf程序
 with tf.Session() as sess:
 	init_op = tf.global_variables_initializer()      #tf.initialize_all_variables()   之前的写法已经过时 
